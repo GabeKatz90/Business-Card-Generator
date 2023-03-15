@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './App.css';
 import SideBar from './components/SideBar';
-import Form from './components/Form';
+import FormContainer from './components/FormContainer';
 import GenerateCard from './components/GeneratedCard';
 import Header from './components/Header';
 
@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Row>
           <Col xs={3}><SideBar /></Col>
-          <Col xs={5}><Form /></Col>
+          <Col xs={5}><FormContainer /></Col>
           <Col xs={4}><GenerateCard /></Col>
         </Row>
       </Container>
