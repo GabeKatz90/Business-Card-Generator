@@ -1,9 +1,3 @@
 # Business Card Generator
 
-![My Remote Image]([)
-
-<img
-  src="https://ukvirtfept112-dxb9792.slack.com/files/U04AM1SLC11/F04ULB6UU3A/final-project-2.pdf"
-  alt="Alt text"
-  title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
+![My Remote Image]([https://www.dropbox.com/s/.../my-remote-image.jpg?dl=0](https://ukvirtfept112-dxb9792.slack.com/files/U04AM1SLC11/F04TG25JFHV/project_2.pdf?origin_team=T046EU58NBT&origin_channel=C04TVQ2P950))
