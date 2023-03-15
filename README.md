@@ -1,3 +1,3 @@
 # Business Card Generator
 
-![My Remote Image](https://ukvirtfept112-dxb9792.slack.com/files/U04AM1SLC11/F04TG25JFHV/project_2.pdf?origin_team=T046EU58NBT&origin_channel=C04TVQ2P950)
+![Screenshot 2023-03-15 at 17 11 37](https://user-images.githubusercontent.com/117780156/225387713-328799d7-8dc5-4d00-8c1d-6eb464ab2cc1.jpg)
