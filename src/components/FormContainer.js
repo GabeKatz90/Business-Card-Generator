@@ -6,6 +6,8 @@ import * as Yup from 'yup';
 import { Polyline } from "@mui/icons-material";
 import PrintIcon from '@mui/icons-material/Print';
 
+import Form from 'react-bootstrap/Form';
+
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
   const formik = useFormik({
@@ -15,7 +17,6 @@ const FormContainer = () => {
       company: "",
       designation: "",
       email: "",
-      linkedin_Username: "",
       mobile: "",
       telephone: "",
       location: ""
@@ -65,7 +66,7 @@ const FormContainer = () => {
         
       {/* Reference for formik handler: https://formik.org/docs/tutorial */}
       {/* TextField is a MUI Material */}
-      <form onSubmit={formik.handleSubmit}>
+      <Form onSubmit={formik.handleSubmit}>
         
         <TextField 
           label="First Name" 
@@ -140,19 +141,10 @@ const FormContainer = () => {
           {formik.errors.email && formik.touched.email && formik.errors.email}
         </div>
 
-        <TextField 
-          label="LinkedIn (Username)" 
-          id="linkedin_Username" 
-          name="linkedin_Username" 
-          variant="outlined"
-          value={formik.values.linkedin_Username}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          >
-        </TextField>
-        <div className="error">
-          {formik.errors.linkedin_Username && formik.touched.linkedin_Username && formik.errors.linkedin_Username}
-        </div>
+        <Button variant="contained" component="label">
+          Upload
+          <input hidden accept="image/*" multiple type="file" />
+        </Button>
 
         <TextField 
           label="Mobile" 
@@ -206,11 +198,6 @@ const FormContainer = () => {
           Generate Card
         </Button>
 
-        <Button variant="contained" component="label">
-        Upload
-        <input hidden accept="image/*" multiple type="file" />
-        </Button>
-
         <Button 
         type="submit"
         variant="contained" 
@@ -221,7 +208,7 @@ const FormContainer = () => {
           Print
         </Button>
 
-      </form>
+      </Form>
     </div>
   )
 }

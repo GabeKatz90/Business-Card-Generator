@@ -12,6 +12,7 @@ function getMap() {
         }
     };
 
+    console.log({getMap});
     axios.request(options).then(function (response) {
         console.log(response.data);
     }).catch(function (error) {
