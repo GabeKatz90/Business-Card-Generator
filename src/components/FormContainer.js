@@ -3,6 +3,8 @@ import { useFormik } from "formik";
 import Button from '@mui/material/Button';
 import { TextField } from "@mui/material";
 import * as Yup from 'yup';
+import { Polyline } from "@mui/icons-material";
+import PrintIcon from '@mui/icons-material/Print';
 
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
@@ -40,10 +42,29 @@ const FormContainer = () => {
     // }
   })
 
+  // Formik API Reference
+  //  /** Form values */
+  //  values: Values;
+  //  /** map of field names to specific error for that field */
+  //  errors: FormikErrors<Values>;
+  //  /** map of field names to **whether** the field has been touched */
+  //  touched: FormikTouched<Values>;
+  //  /** whether the form is currently submitting */
+  //  isSubmitting: boolean;
+  //  /** whether the form is currently validating (prior to submission) */
+  //  isValidating: boolean;
+  //  /** Top level status state, in case you need it */
+  //  status?: any;
+  //  /** Number of times user tried to submit the form */
+  //  submitCount: number;
+  //  }
+  
   return (
     <div>
-      <h1>Your Details:</h1>
+      <p>Business Card Generator</p>
         
+      {/* Reference for formik handler: https://formik.org/docs/tutorial */}
+      {/* TextField is a MUI Material */}
       <form onSubmit={formik.handleSubmit}>
         
         <TextField 
@@ -53,6 +74,9 @@ const FormContainer = () => {
           variant="outlined"
           value={formik.values.firstName}
           onChange={formik.handleChange}
+          // Reference: https://reactjs.org/docs/events.html
+          // The onBlur event handler is called when focus has left the element (or left some element inside of it). 
+          // For example, it’s called when the user clicks outside of a focused text input.
           onBlur={formik.handleBlur}
           >
         </TextField>
@@ -167,6 +191,7 @@ const FormContainer = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           >
+            
         </TextField>
         <div className="error">
           {formik.errors.location && formik.touched.location && formik.errors.location}
@@ -175,9 +200,27 @@ const FormContainer = () => {
         <Button 
         type="submit" 
         variant="contained" 
-        color="success">
+        color="primary"
+        startIcon={<Polyline />}
+        >
           Generate Card
         </Button>
+
+        <Button variant="contained" component="label">
+        Upload
+        <input hidden accept="image/*" multiple type="file" />
+        </Button>
+
+        <Button 
+        type="submit"
+        variant="contained" 
+        color="success"
+        startIcon={<PrintIcon />}
+        disabled
+        >
+          Print
+        </Button>
+
       </form>
     </div>
   )
