@@ -29,18 +29,6 @@ const FormContainer = () => {
       firstName: Yup.string().required("First name is required"),
       lastName: Yup.string().required("Last name is required")
     })
-
-    //  Yup is also the same as this code below. Yup is a simplified validation arrangement.
-    // validate: (values) => {
-    //   const errors = {};
-    //   if (!values.email) {
-    //     errors.email = "Email is required";
-    //   }
-    //   if (!values.firstName) {
-    //     errors.email = "First name is required";
-    //   }
-    //   return errors;
-    // }
   })
 
   // Formik API Reference
