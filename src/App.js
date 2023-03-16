@@ -8,12 +8,21 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Header />
+      <Container >
+        <Header fluid/>
         <Row>
-          <Col xs={3}><SideBar /></Col>
-          <Col xs={5}><FormContainer /></Col>
-          <Col xs={4}><GenerateCard /></Col>
+
+          <Col >
+            <SideBar />
+          </Col>
+
+          <Col >
+            <FormContainer />
+          </Col>
+
+          <Col >
+            <GenerateCard />
+          </Col>
         </Row>
       </Container>
     </div>
