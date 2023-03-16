@@ -12,8 +12,7 @@ function GenerateCard() {
   return (
     <div>
       Generate Card
-      <MapSection location={location} zoomLevel={17} />    
-      </div>
+    </div>
   )
 }
 
