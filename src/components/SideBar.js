@@ -1,4 +1,3 @@
-import { ClassNameConfigurator } from "@mui/base";
 import React from "react";
 
 const SideBar = () => {

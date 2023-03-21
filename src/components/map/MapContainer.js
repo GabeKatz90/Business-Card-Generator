@@ -44,8 +44,8 @@ function MapContainer() {
       <div className="map">
         <div className="google-map">
           <GoogleMapReact
-            bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
-            defaultCenter={position}
+            bootstrapURLKeys={{ key: "AIzaSyAfGKDcKwnD5-Bn8pcs02pIWjS3EFj-CTk" }}
+            center={position}
             defaultZoom={zoomLevel}
             yesIWantToUseGoogleMapApiInternals
           >
