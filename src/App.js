@@ -5,7 +5,7 @@ import SideBar from "./components/SideBar";
 import FormContainer from "./components/FormContainer";
 import GenerateCard from "./components/GeneratedCard";
 import Header from "./components/Header";
-import MapContainer from "./components/Map/MapContainer.js";
+import MapContainer from "./components/map/MapContainer.js";
 
 function App() {
   const [cardInfo, setCardInfo] = useState({});
