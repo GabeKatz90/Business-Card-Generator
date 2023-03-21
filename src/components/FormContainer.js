@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { Row, Col, Container } from "react-bootstrap";
+import MapContainer from "./map/MapContainer";
 // import GenerateCard from "./GeneratedCard";
 
 // MUI Icons
@@ -14,7 +15,6 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import MobileScreenShareIcon from "@mui/icons-material/MobileScreenShare";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
-
 
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
@@ -210,15 +210,28 @@ const FormContainer = () => {
               <Button variant="success" type="submit">
                 Print / Save
               </Button>{" "}
-              <Button>
-                <HelloCounter text={formik.values.firstName} />
-              </Button>
             </Form>
           </Col>
 
           <Col md lg="5">
             <p>This is for Generating Card</p>
-            
+            <Container>
+              <Row>
+
+                <Col>
+                  <MapContainer />
+                </Col>
+
+                <Col>
+                  <Button>
+                    <HelloCounter 
+                      text={formik.values.firstName}
+                    />
+                  </Button>
+                </Col>
+
+              </Row>
+            </Container>
           </Col>
         </Row>
       </Container>
