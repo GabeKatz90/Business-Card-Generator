@@ -1,11 +1,19 @@
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
 import SideBar from "./components/SideBar";
 import FormContainer from "./components/FormContainer";
 import GenerateCard from "./components/GeneratedCard";
 import Header from "./components/Header";
+import MapContainer from "./components/Map/MapContainer.js";
 
 function App() {
+  const [cardInfo, setCardInfo] = useState({});
+
+  const handleSubmit = values => {
+    setCardInfo(values);
+  };
+
   return (
     <div>
       <Header />
@@ -17,13 +25,14 @@ function App() {
           </Col>
 
           <Col md lg="4">
-            <FormContainer />
+            <FormContainer onSubmit={handleSubmit} />
           </Col>
 
           <Col md lg="5">
-            <GenerateCard />
+            <GenerateCard firstName={cardInfo.firstName} />
+            <MapContainer />
           </Col>
-          
+
         </Row>
       </Container>
     </div>

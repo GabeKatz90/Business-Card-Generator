@@ -1,17 +1,16 @@
 import React from "react";
-import MapSection from "./map/Map";
 
-const location = {
-  address: 'London',
-  lat: 51.50787637926165, 
-  lng: -0.12625576582125225,
-}
-
-
-function GenerateCard() {
+function GenerateCard({firstName, lastName, company, designation, email, mobile, location}) {
   return (
-    <div>
+    <div className="card-info">
       Generate Card
+      <div className="card-name">{firstName}</div>
+      <div className="card-last-name">{lastName}</div>
+      <div className="card-company">{company}</div>
+      <div className="card-designation">{designation}</div>
+      <div className="card-email">{email}</div>
+      <div className="card-mobile">{mobile}</div>
+      <div className="card-location">{location}</div>
     </div>
   )
 }
