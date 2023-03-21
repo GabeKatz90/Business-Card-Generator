@@ -1,4 +1,3 @@
-import React from "react";
 import { useFormik } from "formik";
 import * as Yup from 'yup';
 import Button from 'react-bootstrap/Button';
@@ -27,10 +26,7 @@ const FormContainer = () => {
       telephone: "",
       location: ""
     },
-    onSubmit: (values, actions) => {
-      actions.onSubmit(values);
-      actions.setSubmitting(false);
-
+    onSubmit: (values) => {
       console.log("onSubmit", values);
     },
     validationSchema: Yup.object({
@@ -95,9 +91,6 @@ const FormContainer = () => {
               onBlur={formik.handleBlur}
             />
           </InputGroup>
-          <div className="error">
-            {formik.errors.company && formik.touched.company && formik.errors.company}
-          </div>
 
           <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon2"><BadgeIcon /></InputGroup.Text>
@@ -112,9 +105,6 @@ const FormContainer = () => {
               onBlur={formik.handleBlur}
             />
           </InputGroup>
-          <div className="error">
-            {formik.errors.designation && formik.touched.designation && formik.errors.designation}
-          </div>
 
           <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon2"><AlternateEmailIcon /></InputGroup.Text>
@@ -135,9 +125,10 @@ const FormContainer = () => {
           </InputGroup>
 
           {/* Upload Image */}
-          <div class="mb-3">
-            <label for="formFile" class="form-label">Upload your photo / company icon</label>
-            <input class="form-control" type="file" id="formFile" />
+          <div className="mb-3">
+      
+            <p className="form-label">Upload your photo / company icon</p>
+            <input className="form-control" type="file" id="formFile" />
           </div>
 
           <InputGroup className="mb-3">
@@ -153,9 +144,6 @@ const FormContainer = () => {
               onBlur={formik.handleBlur}
             />
           </InputGroup>
-          <div className="error">
-            {formik.errors.mobile && formik.touched.mobile && formik.errors.mobile}
-          </div>
 
           <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon2"><AddIcCallIcon /></InputGroup.Text>
@@ -170,9 +158,6 @@ const FormContainer = () => {
               onBlur={formik.handleBlur}
             />
           </InputGroup>
-          <div className="error">
-            {formik.errors.telephone && formik.touched.telephone && formik.errors.telephone}
-          </div>
 
           <InputGroup className="mb-3">
             <InputGroup.Text id="basic-addon2"><AddLocationAltIcon /></InputGroup.Text>
@@ -187,9 +172,6 @@ const FormContainer = () => {
               onBlur={formik.handleBlur}
             />
           </InputGroup>
-          <div className="error">
-            {formik.errors.location && formik.touched.location && formik.errors.location}
-          </div>
 
           <Button
             variant="primary"

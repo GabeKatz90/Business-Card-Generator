@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
 import SideBar from "./components/SideBar";
@@ -8,12 +7,6 @@ import Header from "./components/Header";
 import MapContainer from "./components/map/MapContainer.js";
 
 function App() {
-  const [cardInfo, setCardInfo] = useState({});
-
-  const handleSubmit = values => {
-    setCardInfo(values);
-  };
-
   return (
     <div>
       <Header />
@@ -25,11 +18,11 @@ function App() {
           </Col>
 
           <Col md lg="4">
-            <FormContainer onSubmit={handleSubmit} />
+            <FormContainer />
           </Col>
 
           <Col md lg="5">
-            <GenerateCard firstName={cardInfo.firstName} />
+            <GenerateCard />
             <MapContainer />
           </Col>
 
