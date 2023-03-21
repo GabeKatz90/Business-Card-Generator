@@ -5,6 +5,15 @@ import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
 
+// MUI Icons
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import BusinessIcon from '@mui/icons-material/Business';
+import BadgeIcon from '@mui/icons-material/Badge';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import MobileScreenShareIcon from '@mui/icons-material/MobileScreenShare';
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
   const formik = useFormik({
@@ -38,7 +47,7 @@ const FormContainer = () => {
         <Form onSubmit={formik.handleSubmit}>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><AccountCircleIcon /></InputGroup.Text>
             <Form.Control
               placeholder="First Name"
               aria-label="firstName"
@@ -48,14 +57,15 @@ const FormContainer = () => {
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              isInvalid={formik.errors.firstName && formik.touched.firstName && formik.errors.firstName}
             />
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.firstName && formik.touched.firstName && formik.errors.firstName}
+            </Form.Control.Feedback>
           </InputGroup>
-          <div className="error">
-            {formik.errors.firstName && formik.touched.firstName && formik.errors.firstName}
-          </div>
-
+    
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><AccountCircleIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Last Name"
               aria-label="lastName"
@@ -65,15 +75,15 @@ const FormContainer = () => {
               value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              isInvalid={formik.errors.lastName && formik.touched.lastName && formik.errors.lastName}
             />
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.lastName && formik.touched.lastName && formik.errors.lastName}
+            </Form.Control.Feedback>
           </InputGroup>
 
-          <div className="error">
-            {formik.errors.lastName && formik.touched.lastName && formik.errors.lastName}
-          </div>
-
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><BusinessIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Company"
               aria-label="company"
@@ -90,7 +100,7 @@ const FormContainer = () => {
           </div>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><BadgeIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Designation"
               aria-label="designation"
@@ -107,7 +117,7 @@ const FormContainer = () => {
           </div>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><AlternateEmailIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Email"
               aria-label="email"
@@ -117,12 +127,12 @@ const FormContainer = () => {
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              isInvalid={formik.errors.email && formik.touched.email && formik.errors.email}
             />
+            <Form.Control.Feedback type="invalid">
+              {formik.errors.email && formik.touched.email && formik.errors.email}
+            </Form.Control.Feedback>
           </InputGroup>
-
-          <div className="error">
-            {formik.errors.email && formik.touched.email && formik.errors.email}
-          </div>
 
           {/* Upload Image */}
           <div class="mb-3">
@@ -131,7 +141,7 @@ const FormContainer = () => {
           </div>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">#</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><MobileScreenShareIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Mobile"
               aria-label="mobile"
@@ -148,7 +158,7 @@ const FormContainer = () => {
           </div>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">#</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><AddIcCallIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Telephone"
               aria-label="telephone"
@@ -165,7 +175,7 @@ const FormContainer = () => {
           </div>
 
           <InputGroup className="mb-3">
-            <InputGroup.Text id="basic-addon2">#</InputGroup.Text>
+            <InputGroup.Text id="basic-addon2"><AddLocationAltIcon /></InputGroup.Text>
             <Form.Control
               placeholder="Location"
               aria-label="location"
