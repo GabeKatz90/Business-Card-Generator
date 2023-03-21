@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import GoogleMapReact from 'google-map-react'
-import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/map-marker'
+// import { Icon } from '@iconify/react'
+// import locationIcon from '@iconify/icons-mdi/map-marker'
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import '../map/map.css'
 
 function MapContainer() {
@@ -26,7 +27,7 @@ function MapContainer() {
 
   const LocationPin = ({ text }) => (
     <div className="pin">
-      <Icon icon={locationIcon} className="pin-icon" />
+      <PersonPinCircleIcon />
       <p className="pin-text">{text}</p>
     </div>
   )
@@ -37,7 +38,7 @@ function MapContainer() {
 
   const position = { lat, lng };
 
-  const zoomLevel = 10;
+  const zoomLevel = 14;
 
   return (
     <div>
@@ -52,7 +53,10 @@ function MapContainer() {
             <LocationPin
               lat={lat}
               lng={lng}
-              text={status === null ? "Your Location" : status}
+              text={
+                status === null 
+                ? "Your Location" 
+                : status}
             />
           </GoogleMapReact>
         </div>
