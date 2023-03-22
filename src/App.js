@@ -1,26 +1,22 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import SideBar from "./components/SideBar";
-import FormContainer from "./components/FormContainer";
 import Header from "./components/Header";
+import HomePage from "./components/HomePage";
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Header />
-      <Container fluid className="HomePage">
-        <Row>
-
-          <Col md="0" lg="2">
-            <SideBar />
-          </Col>
-
-          <Col md="12" lg="10">
-            <FormContainer />
-          </Col>
-
-        </Row>
-      </Container>
+      <HomePage />
+      
+      {/* <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='about' element={<About />} />
+        <Route path='contact' element={<Contact />} />
+      </Routes> */}
     </div>
   );
 }
