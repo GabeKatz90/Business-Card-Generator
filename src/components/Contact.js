@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
-function BgColorExample() {
+function Contact () {
   return (
     <>
       {[
@@ -34,4 +34,4 @@ function BgColorExample() {
   );
 }
 
-export default BgColorExample;
+export default Contact;
