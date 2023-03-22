@@ -5,10 +5,10 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { Row, Col, Container } from "react-bootstrap";
-import MapContainer from "./map/MapContainer";
 import "./css/style.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import MapModal from './map/ModalMap';
 
 // MUI Icons
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -213,6 +213,7 @@ const FormContainer = () => {
               <Button variant="success" type="submit">
                 Print / Save
               </Button>{" "}
+              
             </Form>
           </Col>
 
@@ -227,7 +228,7 @@ const FormContainer = () => {
                 />
                 <Card.Body>
                   <Card.Title>
-                  <HelloCounter 
+                  <FormFirstName 
                       text={formik.values.firstName}
                     />
                   </Card.Title>
@@ -248,12 +249,12 @@ const FormContainer = () => {
               </Card>
               
               <Card className="BackCard">
-                <MapContainer />
-                {/* <Card.Img
+                
+                <Card.Img
                   variant="top"
                   src="holder.js/100px180?text=Image cap"
-                /> */}
-                {/* <Card.Body>
+                />
+                <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make
@@ -266,16 +267,14 @@ const FormContainer = () => {
                   <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
+                  <Card.Link href="#">
+                    <MapModal />
+                  </Card.Link>
                   <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body> */}
+                </Card.Body>
               </Card>          
 
               </Row>
-
-              
-
-              
               {/* <Row>
 
                 <Col>
@@ -299,7 +298,7 @@ const FormContainer = () => {
   );
 };
 
-const HelloCounter = (props) => {
+const FormFirstName = (props) => {
   return <p>{props.text}</p>;
 };
 
