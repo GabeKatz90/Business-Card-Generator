@@ -1,0 +1,15 @@
+.Form_Div {
+  margin-bottom: 40px;
+}
+
+.GeneCard {
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.FrontCard {
+  margin-bottom: 40px;
+}
+
