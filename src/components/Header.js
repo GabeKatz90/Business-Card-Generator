@@ -4,9 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Header() {
   return (
-  <Navbar bg="light" expand="lg">
+  <Navbar bg="light" expand="lg" className='NavHeader'>
   <Container fluid>
-    <Navbar.Brand href="#home">Business Card Generator</Navbar.Brand>
+    <Navbar.Brand href="#home" className='BrandName'>Business Card Generator</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">

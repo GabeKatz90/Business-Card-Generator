@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Button from "react-bootstrap/Button";
@@ -21,6 +21,7 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
+  const [showFormValues, setShowFormValues] = useState(null);
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -33,6 +34,7 @@ const FormContainer = () => {
       location: "",
     },
     onSubmit: (values) => {
+      setShowFormValues(values);
       console.log(values);
     },
     validationSchema: Yup.object({
@@ -218,88 +220,87 @@ const FormContainer = () => {
           </Col>
 
           <Col md lg="6" >
-            <Container fluid>
-            <p>This is for Generating Card</p>
-              <Row className="GeneCard">
-              <Card className="FrontCard">
-                <Card.Img
-                  variant="top"
-                  src="holder.js/100px180?text=Image cap"
-                />
-                <Card.Body>
-                  <Card.Title>
-                  <FormFirstName 
-                      text={formik.values.firstName}
-                    />
-                  </Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
-              </Card>
-              
-              <Card className="BackCard">
+            {showFormValues && (
+              <Container fluid>
+              <p>Generating card...</p>
+                <Row className="GeneCard">
+                <Card className="FrontCard">
+                  <Card.Img
+                    variant="top"
+                    src="holder.js/100px180?text=Image cap"
+                  />
+                  <Card.Body>
+                    <Card.Title>
+                      <div>
+                        {showFormValues.firstName}
+                      </div>
+                    </Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                  <ListGroup className="list-group-flush">
+                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                  </ListGroup>
+                  <Card.Body>
+                    <Card.Link href="#">Card Link</Card.Link>
+                    <Card.Link href="#">Another Link</Card.Link>
+                  </Card.Body>
+                </Card>
                 
-                <Card.Img
-                  variant="top"
-                  src="holder.js/100px180?text=Image cap"
-                />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                  <Card.Link href="#">
-                    <MapModal />
-                  </Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
-              </Card>          
-
-              </Row>
-              {/* <Row>
-
-                <Col>
-                  <MapContainer />
-                </Col>
-
-                <Col>
-                  <Button className="pindot">
-                    <HelloCounter 
-                      text={formik.values.firstName}
-                    />
-                  </Button>
-                </Col>
-
-              </Row> */}
-            </Container>
+                <Card className="BackCard">
+                  
+                  <Card.Img
+                    variant="top"
+                    src="holder.js/100px180?text=Image cap"
+                  />
+                  <Card.Body>
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </Card.Text>
+                  </Card.Body>
+                  <ListGroup className="list-group-flush">
+                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                  </ListGroup>
+                  <Card.Body>
+                    <Card.Link href="#">
+                      <MapModal />
+                    </Card.Link>
+                    <Card.Link href="#">Another Link</Card.Link>
+                  </Card.Body>
+                </Card>          
+  
+                </Row>
+                {/* <Row>
+  
+                  <Col>
+                    <MapContainer />
+                  </Col>
+  
+                  <Col>
+                    <Button className="pindot">
+                      <HelloCounter 
+                        text={formik.values.firstName}
+                      />
+                    </Button>
+                  </Col>
+  
+                </Row> */}
+              </Container>
+            )}
+            
           </Col>
         </Row>
       </Container>
     </div>
   );
-};
-
-const FormFirstName = (props) => {
-  return <p>{props.text}</p>;
 };
 
 export default FormContainer;
