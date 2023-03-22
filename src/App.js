@@ -9,14 +9,14 @@ function App() {
   return (
     <div>
       <Header />
-      <Container fluid>
+      <Container fluid className="HomePage">
         <Row>
 
-          <Col md lg="2">
+          <Col xs lg="2">
             <SideBar />
           </Col>
 
-          <Col md lg="10">
+          <Col xs lg="10">
             <FormContainer />
           </Col>
 
