@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 // import { Icon } from '@iconify/react'
 // import locationIcon from '@iconify/icons-mdi/map-marker'
 import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
-import '../map/map.css'
+import './map.css'
 
 function MapContainer() {
   const [lat, setLat] = useState(null);

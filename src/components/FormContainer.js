@@ -48,9 +48,9 @@ const FormContainer = () => {
 
   return (
     <div>
-      <Container fluid>
+      <Container fluid className="form-container">
         <Row>
-          <Col md lg="6" className="Form_Div">
+          <Col md lg="6" id="form">
             <p>Business Card Generator</p>
             <Form onSubmit={formik.handleSubmit}>
               <InputGroup className="mb-3">
@@ -215,68 +215,69 @@ const FormContainer = () => {
               <Button variant="success" type="submit">
                 Print / Save
               </Button>{" "}
-              
+
             </Form>
           </Col>
 
-          <Col md lg="6" >
+          <Col md lg="6">
             {showFormValues && (
               <Container fluid>
-              <p>Generating card...</p>
                 <Row className="GeneCard">
-                <Card className="FrontCard">
-                  <Card.Img
-                    variant="top"
-                    src="holder.js/100px180?text=Image cap"
-                  />
-                  <Card.Body>
-                    <Card.Title>
-                      <div>
-                        {showFormValues.firstName}
+                  <div className="card-body">
+                    <div className="business-card">
+                      <div class="business-card-inner">
+                        <div class="business-card-front">
+                          <div class="laptop">
+                            <div class="keyboard">
+                              <div class="logo-text"><h1>{showFormValues.designation}</h1>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="business-card-back">
+                          <div class="logo-left-side">
+                            <div className="card-name">
+                              <h3>{showFormValues.firstName} {showFormValues.lastName}</h3>
+                            </div>
+                            <div className="card-company">
+                              <h5>{showFormValues.company} - {showFormValues.designation}</h5>
+                            </div>
+
+                            <div className="email">{showFormValues.email}</div>
+                            <div className="mobile">{showFormValues.mobile}</div>
+                            <div className="telephone">{showFormValues.telephone}</div>
+                            <div className="telephone">{showFormValues.telephone}</div>
+                          </div>
+                        </div>
                       </div>
-                    </Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make
-                      up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                  <ListGroup className="list-group-flush">
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                  </ListGroup>
-                  <Card.Body>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
-                  </Card.Body>
-                </Card>
-                
-                <Card className="BackCard">
-                  
-                  <Card.Img
-                    variant="top"
-                    src="holder.js/100px180?text=Image cap"
-                  />
-                  <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make
-                      up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                  <ListGroup className="list-group-flush">
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                  </ListGroup>
-                  <Card.Body>
-                    <Card.Link href="#">
+                    </div>
+                    </div>
+                    
+
+                  <Card id="BackCard" className="business-card">
+
+                    <Card.Body>
+                      <Card.Title>
+                        <div className="card-name">
+                          {showFormValues.firstName} {showFormValues.lastName}
+                        </div>
+                      </Card.Title>
+                      <Card.Text>
+                        <div className="card-company">
+                          {showFormValues.company} - {showFormValues.designation}
+                        </div>
+                      </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                      <div className="email">{showFormValues.email}</div>
+                      <div className="mobile">{showFormValues.mobile}</div>
+                      <div className="telephone">{showFormValues.telephone}</div>
+                    </ListGroup>
+                    <Card.Body>
                       <MapModal />
-                    </Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
-                  </Card.Body>
-                </Card>          
-  
+                    </Card.Body>
+                  </Card>
+
                 </Row>
                 {/* <Row>
   
@@ -295,7 +296,7 @@ const FormContainer = () => {
                 </Row> */}
               </Container>
             )}
-            
+
           </Col>
         </Row>
       </Container>
