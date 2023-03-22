@@ -8,7 +8,6 @@ import { Row, Col, Container } from "react-bootstrap";
 import "./css/style.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import MapModal from './map/ModalMap';
 
 // MUI Icons
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -18,6 +17,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import MobileScreenShareIcon from "@mui/icons-material/MobileScreenShare";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
+import MapContainer from "./map/MapContainer";
 
 // Reference: https://www.youtube.com/watch?v=khGypss-RJs&t=214s
 const FormContainer = () => {
@@ -222,7 +222,7 @@ const FormContainer = () => {
           <Col md lg="6">
             {showFormValues && (
               <Container fluid>
-                <Row className="GeneCard">
+                <div className="GeneCard">
                   <div className="card-body">
                     <div className="business-card">
                       <div class="business-card-inner">
@@ -230,7 +230,7 @@ const FormContainer = () => {
                           <div class="laptop">
                             <div class="keyboard">
                               <div class="logo-text"><h1>{showFormValues.designation}</h1>
-                            </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -242,7 +242,6 @@ const FormContainer = () => {
                             <div className="card-company">
                               <h5>{showFormValues.company} - {showFormValues.designation}</h5>
                             </div>
-
                             <div className="email">{showFormValues.email}</div>
                             <div className="mobile">{showFormValues.mobile}</div>
                             <div className="telephone">{showFormValues.telephone}</div>
@@ -251,49 +250,13 @@ const FormContainer = () => {
                         </div>
                       </div>
                     </div>
-                    </div>
-                    
+                  </div>
 
-                  <Card id="BackCard" className="business-card">
-
-                    <Card.Body>
-                      <Card.Title>
-                        <div className="card-name">
-                          {showFormValues.firstName} {showFormValues.lastName}
-                        </div>
-                      </Card.Title>
-                      <Card.Text>
-                        <div className="card-company">
-                          {showFormValues.company} - {showFormValues.designation}
-                        </div>
-                      </Card.Text>
-                    </Card.Body>
-                    <ListGroup className="list-group-flush">
-                      <div className="email">{showFormValues.email}</div>
-                      <div className="mobile">{showFormValues.mobile}</div>
-                      <div className="telephone">{showFormValues.telephone}</div>
-                    </ListGroup>
-                    <Card.Body>
-                      <MapModal />
-                    </Card.Body>
-                  </Card>
-
-                </Row>
-                {/* <Row>
-  
-                  <Col>
+                  <div className="map-body">
                     <MapContainer />
-                  </Col>
-  
-                  <Col>
-                    <Button className="pindot">
-                      <HelloCounter 
-                        text={formik.values.firstName}
-                      />
-                    </Button>
-                  </Col>
-  
-                </Row> */}
+                  </div>
+
+                </div>
               </Container>
             )}
 
