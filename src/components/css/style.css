@@ -17,12 +17,27 @@
 }
 
 
-/* CARD STYLE */
+.GeneCard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+/* MAP SECTION */
+.map-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* CARD SECTION */
+
 .card-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
 }
 
 .business-card {
@@ -63,3 +78,4 @@
 .business-card-back {
   transform: rotateY(180deg);
 }
+
