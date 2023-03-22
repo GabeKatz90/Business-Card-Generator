@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Container fluid>
+      <Container fluid className="HomePage">
         <Row>
 
           <Col md="0" lg="2">

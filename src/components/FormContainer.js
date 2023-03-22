@@ -1,13 +1,24 @@
 import React, { useState } from "react";
+
+// Formik
 import { useFormik } from "formik";
+
+// Yup - Form Validation Schema
 import * as Yup from "yup";
+
+//  React-Boostrap v5.2
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import { Row, Col, Container } from "react-bootstrap";
-import "./css/style.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+
+
+// Project Path
+import "./css/style.css";
+import MapModal from './map/ModalMap';
+
 
 // MUI Icons
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -249,10 +260,13 @@ const FormContainer = () => {
                           </div>
                         </div>
                       </div>
+
                     </div>
                   </div>
 
+
                   <div className="map-body">
+
                     <MapContainer />
                   </div>
 

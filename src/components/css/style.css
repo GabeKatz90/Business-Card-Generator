@@ -8,11 +8,14 @@
 
 .BrandName {
   font-weight: bold;
+  color: #C0D6DF;
 }
 
 .NavHeader {
   margin-bottom: 20px;
+  background-color: #4F6D7A;
 }
+
 
 .GeneCard {
   display: flex;
@@ -30,6 +33,7 @@
 }
 
 /* CARD SECTION */
+
 .card-body {
   display: flex;
   justify-content: center;
