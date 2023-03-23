@@ -14,6 +14,7 @@ The business card generator app is ideal for entrepreneurs, freelancers, small b
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [License](#license)
+  - [Links](#links)
   - [Acknowledgments](#acknowledgments)
   - [Authors](#authors)
 
@@ -48,6 +49,10 @@ The business card generator app is ideal for entrepreneurs, freelancers, small b
 
 Distributed under the MIT License. 
 
+## Links
+
+[Deployed Site](https://641c3fb5882b5b19749b7c9d--deft-donut-329f3a.netlify.app/)
+
 ## Acknowledgments
 
 [Card design](https://lenadesign.org/2021/06/24/css-3d-flip-business-card/)
@@ -55,3 +60,8 @@ Distributed under the MIT License.
 
 ## Authors
 
+[rpjsazon](https://github.com/rpjsazon)
+
+[Kevin27j](https://github.com/Kevin27j)
+
+[GabeKatz90](https://github.com/GabeKatz90)
