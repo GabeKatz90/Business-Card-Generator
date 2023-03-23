@@ -1,7 +1,6 @@
 # Business Card Generator
 
 ## Description
-![Screenshot 2023-03-23 at 15 46 35](https://user-images.githubusercontent.com/117780156/227258813-54847e4b-627a-40b3-b35b-366316ec41f0.jpg)
 
 This is a business card generator app that allows users to easily create a professional business card.
 The business card generator app is ideal for entrepreneurs, freelancers, small business owners, and anyone who wants to create a professional-looking business card quickly and easily.
@@ -29,6 +28,9 @@ The business card generator app is ideal for entrepreneurs, freelancers, small b
 ```
 
 ## Screenshots
+![Screenshot 2023-03-23 at 15 49 17](https://user-images.githubusercontent.com/117780156/227259390-d2e5add1-0d09-4a97-b03a-606818bb2749.jpg)
+![Screenshot 2023-03-23 at 15 46 50](https://user-images.githubusercontent.com/117780156/227259416-99d407d9-139d-438e-aa4b-5e7b800d0953.jpg)
+![Screenshot 2023-03-23 at 15 46 55](https://user-images.githubusercontent.com/117780156/227259566-e122d556-f780-4403-97ea-0a1affa8984d.jpg)
 
 
 ## Usage
