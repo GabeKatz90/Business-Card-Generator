@@ -17,6 +17,16 @@
 }
 
 
+
+.side-bar {
+  background-color: #0a9496da;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
 .GeneCard {
   display: flex;
   flex-direction: column;
@@ -64,7 +74,7 @@
 
 .business-card-front, .business-card-back {
   position: absolute;
-  background-color: #0a9396;
+  background-color: #0a9496da;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
