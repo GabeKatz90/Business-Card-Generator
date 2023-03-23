@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CaptureCard from "./captureCard/CaptureCard";
 
 // Formik
 import { useFormik } from "formik";
@@ -219,9 +220,7 @@ const FormContainer = () => {
               <Button variant="primary" type="submit">
                 Generate Card
               </Button>{" "}
-              <Button variant="success" type="submit">
-                Print / Save
-              </Button>{" "}
+              <CaptureCard />
 
             </Form>
           </Col>
@@ -251,7 +250,6 @@ const FormContainer = () => {
                             </div>
                             <div className="email">{showFormValues.email}</div>
                             <div className="mobile">{showFormValues.mobile}</div>
-                            <div className="telephone">{showFormValues.telephone}</div>
                             <div className="telephone">{showFormValues.telephone}</div>
                           </div>
                         </div>

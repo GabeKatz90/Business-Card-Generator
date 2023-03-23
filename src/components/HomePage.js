@@ -8,11 +8,11 @@ function HomePage() {
         <Container fluid className="HomePage">
         <Row>
 
-          <Col md="0" lg="2">
-            <SideBar />
+          <Col md="0" lg="3">
+            <SideBar/>
           </Col>
 
-          <Col md="12" lg="10">
+          <Col md="12" lg="9">
             <FormContainer />
           </Col>
 
