@@ -28,7 +28,8 @@ The business card generator app is ideal for entrepreneurs, freelancers, small b
 
 ## Screenshots
 
-![Screenshot 2023-03-23 at 15 57 00](https://user-images.githubusercontent.com/117780156/227261930-56a4507c-acd2-4ba4-ab7f-9e862684b8cb.jpg)
+![Screenshot 2023-03-23 at 16 02 20](https://user-images.githubusercontent.com/117780156/227263446-a274b1a4-74e8-4486-9d16-ffdf96712795.jpg)
+
 
 ![Screenshot 2023-03-23 at 15 52 52](https://user-images.githubusercontent.com/117780156/227262106-e0e0f0b9-2692-400d-912c-a43dd979bc04.jpg)
 
