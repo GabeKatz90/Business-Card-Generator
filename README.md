@@ -62,7 +62,7 @@ Distributed under the MIT License.
 
 ## Links
 
-[Deployed Site](https://641c3fb5882b5b19749b7c9d--deft-donut-329f3a.netlify.app/)
+[Deployed Site](https://deft-donut-329f3a.netlify.app/)
 
 ## Acknowledgments
 
