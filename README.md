@@ -6,6 +6,7 @@ This is a business card generator app that allows users to easily create a profe
 The business card generator app is ideal for entrepreneurs, freelancers, small business owners, and anyone who wants to create a professional-looking business card quickly and easily.
 
 ## Table of Contents
+- [Business Card Generator](#business-card-generator)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
@@ -36,10 +37,16 @@ The business card generator app is ideal for entrepreneurs, freelancers, small b
 
 ## Usage
 
+To use the Google Maps functionality you need to generate an API key [here](https://developers.google.com/maps/documentation/javascript/get-api-key)
+Create a .env file on the root directory and paste your key like this
+```
+  REACT_APP_API_KEY=paste-your-key-here
+```
+To start the application:
+
 ```
   npm start
 ```
-
 
 ## Contributing
 
